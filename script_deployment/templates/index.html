@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Form</title>
+    <style>
+        .radio-group {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 10px;
+        }
+        .radio-group label {
+            margin-right: 15px;
+        }
+    </style>
+</head>
+<body>
+    <form action="/predict/klasifikasi" method="post">
+        <label for="age">Age:</label>
+        <input type="text" id="age" name="age"><br>
+
+        <div class="radio-group">
+            <label for="gender">Gender:</label>
+            <label for="gender_male">
+                <input type="radio" id="gender_male" name="gender" value="0"> Male
+            </label>
+            <label for="gender_female">
+                <input type="radio" id="gender_female" name="gender" value="1"> Female
+            </label>
+            <label for="gender_others">
+                <input type="radio" id="gender_others" name="gender" value="2"> Others
+            </label>
+        </div>
+
+        <div class="radio-group">
+            <label for="family">Family History:</label>
+            <label for="family_yes">
+                <input type="radio" id="family_yes" name="family" value="1"> Yes
+            </label>
+            <label for="family_no">
+                <input type="radio" id="family_no" name="family" value="0"> No
+            </label>
+        </div>
+
+        <div class="radio-group">
+            <label for="treatment">Treatment:</label>
+            <label for="treatment_yes">
+                <input type="radio" id="treatment_yes" name="treatment" value="1"> Yes
+            </label>
+            <label for="treatment_no">
+                <input type="radio" id="treatment_no" name="treatment" value="0"> No
+            </label>
+        </div>
+
+        <div class="radio-group">
+            <label for="work">Work Interfere:</label>
+            <label for="work_never">
+                <input type="radio" id="work_never" name="work" value="0"> Never
+            </label>
+            <label for="work_sometimes">
+                <input type="radio" id="work_sometimes" name="work" value="1"> Sometimes
+            </label>
+            <label for="work_rarely">
+                <input type="radio" id="work_rarely" name="work" value="2"> Rarely
+            </label>
+            <label for="work_often">
+                <input type="radio" id="work_often" name="work" value="3"> Often
+            </label>
+            <label for="work_adaptive">
+                <input type="radio" id="work_adaptive" name="work" value="4"> Adaptive
+            </label>
+        </div>
+
+        <div class="radio-group">
+            <label for="care">Care Options:</label>
+            <label for="care_yes">
+                <input type="radio" id="care_yes" name="care" value="1"> Yes
+            </label>
+            <label for="care_no">
+                <input type="radio" id="care_no" name="care" value="0"> No
+            </label>
+            <label for="care_not">
+                <input type="radio" id="care_not" name="care" value="2"> Not Sure
+            </label>
+        </div>
+
+        <div class="radio-group">
+            <label for="wellness">Wellness Program:</label>
+            <label for="wellness_yes">
+                <input type="radio" id="wellness_yes" name="wellness" value="1"> Yes
+            </label>
+            <label for="wellness_no">
+                <input type="radio" id="wellness_no" name="wellness" value="0"> No
+            </label>
+            <label for="wellness_not">
+                <input type="radio" id="wellness_not" name="wellness" value="2"> Not Sure
+            </label>
+        </div>
+
+        <div class="radio-group">
+            <label for="seek">Seek Help:</label>
+            <label for="seek_yes">
+                <input type="radio" id="seek_yes" name="seek" value="1"> Yes
+            </label>
+            <label for="seek_no">
+                <input type="radio" id="seek_no" name="seek" value="0"> No
+            </label>
+            <label for="seek_not">
+                <input type="radio" id="seek_not" name="seek" value="2"> Not Sure
+            </label>
+        </div>
+
+        <div class="radio-group">
+            <label for="mental">Mental Health Consequence:</label>
+            <label for="mental_yes">
+                <input type="radio" id="mental_yes" name="mental" value="1"> Yes
+            </label>
+            <label for="mental_no">
+                <input type="radio" id="mental_no" name="mental" value="0"> No
+            </label>
+        </div>
+
+        <div class="radio-group">
+            <label for="phys">Physical Health Consequence:</label>
+            <label for="phys_yes">
+                <input type="radio" id="phys_yes" name="phys" value="1"> Yes
+            </label>
+            <label for="phys_no">
+                <input type="radio" id="phys_no" name="phys" value="0"> No
+            </label>
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
